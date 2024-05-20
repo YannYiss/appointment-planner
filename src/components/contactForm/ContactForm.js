@@ -17,7 +17,7 @@ export const ContactForm = ({
       <input id='phone' type='number' minLength='10' onChange={({target}) => setPhone(target.value)} value={phone}/>
       <label htmlFor='email'>Email</label>
       <input id='email' type='text' onChange={({target}) => setEmail(target.value)} value={email}/>
-      <button type="submit">Submit</button>
+      <input type="submit" value='Add Contact'/>
     </form>
   );
 };

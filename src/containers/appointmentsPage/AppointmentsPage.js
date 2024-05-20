@@ -17,20 +17,19 @@ export const AppointmentsPage = ({appointments, contacts, addAppointment}) => {
         date,
         contact
       }
-    }
-    console.log(newAppointment.details)
+    };
     addAppointment(newAppointment);
-    setContact('');
+    setAppointmentInfo('');
+    setDate('');
     setTitle('');
-    setAppointmentInfo();
-    setDate();
+    setContact('');
   };
 
   return (
     <div>
       <section>
         <h2>Add Appointment</h2>
-        <AppointmentForm handleSubmit={handleSubmit} contacts={contacts} title={title} contact={contact} setContact={setContact} setTitle={setTitle} setDate={setDate} setAppointmentInfo={setAppointmentInfo}/>
+        <AppointmentForm handleSubmit={handleSubmit} contacts={contacts} title={title} contact={contact} date={date} appointmentInfo={appointmentInfo} setContact={setContact} setTitle={setTitle} setDate={setDate} setAppointmentInfo={setAppointmentInfo}/>
       </section>
       <hr />
       <section>

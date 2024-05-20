@@ -5,12 +5,14 @@ export const ContactPicker = ({contacts, value, handleChange}) => {
     <div>
       <label htmlFor="contact">Contact:</label>
       <select id='contact' name='contact' onChange={handleChange} value={value} required>
-        <option value='' key='defualt'></option>
-        {contacts.map((contact => {
+        <option value={''} key={'default'}>
+          No contact Selected
+        </option>
+        {contacts.map((contact) => {
           return (
             <option value={contact.title} key={contact.title}>{contact.title}</option> 
-          )
-        }))}
+          );
+        })}
       </select>
     </div>
   );
